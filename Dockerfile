@@ -5,7 +5,6 @@ WORKDIR /app
 VOLUME /app
 COPY startup.sh /startup.sh
 
-RUN echo "Asia/shanghai" > /etc/timezone;
 RUN apk add --update mysql mysql-client && rm -f /var/cache/apk/*
 RUN mkdir -p /install
 COPY my.cnf /etc/mysql/my.cnf

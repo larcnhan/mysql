@@ -8,7 +8,7 @@ else
     
 	# init database
     #mysql_install_db --user=mysql --datadir=/app/mysql > /dev/null
-    mysql_install_db --user=root > /dev/null
+    mysql_install_db --user=root --datadir=/app/mysql > /dev/null
 
 	# set mysql root default password
     if [ "$MYSQL_ROOT_PASSWORD" = "" ]; then
